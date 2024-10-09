@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Inclure Materialize CSS dans le head -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+
+<body>
+    <input type="checkbox" id="trigger">
+
+    <header>
+        <div class="header-content">
+            <h1 data-text="prénom" class="prenom">Armand Braud</h1>
+            <nav class="navigation">
+                <a href="#Qui-Suis-Je">Qui suis-je<span></span></a>
+                <a href="#competences">Compétences<span></span></a>
+                <a href="#formation">Formations<span></span></a>
+                <a href="#experience">Expériences Professionnelles<span></span></a>
+                <a href="#projets">Projets Réalisés<span></span></a>
+                <a href="#Contact">contact<span></span></a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="center">
+        <div class="box center" id="Qui-Suis-Je">
+            <img src="images/imageMoi.png" id="imageMoi" alt="Photo">
+            <p>
+                Je m'appelle Armand Braud, j'ai 20 ans et je suis titulaire d'un bac STI2D SIN et d'un BTS SNEC</br>
+                Actuellement inscrit à Epitech en pré-MSC-PRO pour une durée de 3 ans.</br>
+                Afin d'effectuer ce cursus je suis à la recherche d'une alternance d'une durée de 33 mois, de début janvier au 10 septembre 2027.</br>
+                Je m'intéresse au développement web, à la programmation intégrée et à l'intelligence artificielle.</br>
+            </p>
+        </div>
+    </section>
+    <div class="box_comp">
+        <h3 id="competences">Compétences</h3>
+        <section class="skills-grid2">
+            <div class="skill-item">
+                <div class="skill">
+                    <h3>Programmation C++/C</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h3>HTML / CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <div class="skill">
+                    <h3>Français</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <h3>Anglais</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h3>Espagnol</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="box_comp" id="formation">
+        <h3>Formations</h3>
+        <div class="skill-item">
+            <h4>MSC-PRO</h4>
+            <p>
+                2024-2027<br>
+                Je suis actuellement à Epitech au Kremelin-Bicêtre pour une durée de 3 ans.<br>
+                Cette formarion commence par une piscine de 4 mois durant laquelle je vais pouvoir améliorer mes
+                compétences. J'ai déjà vu le bash, le python, l'HTML et le CSS.
+            </p>
+
+        </div>
+        <div class="skill-item">
+            <h4>BTS SNEC</h4>
+            <p>
+                2022-2024 / Système Numérique, Électronique et communication<br>
+                J'ai effectué ce BTS SNEC au Jean Perrin à Saint Ouen l'Aumône.<br>
+                Durant ce cursus, j'ai fait de l'électronique et de la programmation intégrée en langage C++ et C. J'ai
+                appris à utiliser les logiciels Proteus et Arduino
+            </p>
+
+        </div>
+        <div class="skill-item">
+            <h4>BAC STI2D SIN</h4>
+            <p>
+                2020-2022 / Systèmes d'Information et Numérique<br>
+                J'ai effectué mon bac au lycée Jean Perrin à Saint Ouen l'Aumône.<br>
+                Durant ce bac, j'ai obtenue la mention bien. J'ai pu effectué de l'électronique, de la modélisation et
+                de la programmation en C++. Durant mon bac, j'ai principalement utilisé Proteus, Arduino et Solids Works
+                comme logiciel.
+
+        </div>
+        <div class="diplomes">
+            <h4>Diplômes</h4>
+            <div class="dipl">
+                <div class="bottom">
+                    <a href="PDF/Resultats_BTS_SNEC.pdf" target="_blank" class="result-button">Resultats BTS</a>
+                </div>
+                <div class="bottom">
+                    <a href="PDF/Bac_resultat.pdf" target="_blank" class="result-button">BAC STI2D</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section> 
+
+    <section class="box_comp" id="experience">
+        <h3>Expériences Professionnelles</h3>
+        <div class="skill-item">
+            <h4>Stage de 6 semaines</h4>
+            <p>
+                mais-juin 2023 / Neyos / Cergy port<br>
+                J'ai effectué ce stage dans le cadre de mon BTS. Neyos est une Start-up dans laquelle j'ai travaillé avec le responsable informatique.<br>
+                Durant ce stage, j'ai pu souder et coder en C sur des cartes électroniques afin d'aider mon maître de stage dans ses tâches.<br>
+                Ce stage m'a aussi fait travailler mon autonomie et ma recherche d'information.
+            </p>
+        </div>
+    </section>    
+    <section class="box_comp" id="projets">
+        <h3>Projets Réalisés</h3>
+            <details>
+                <summary><div class="bottom2"><a><h6>Bras robot commandé en temps réel ou avec des séquences</h6></a></div></summary>
+                <div class="projet-item center">
+                    <p>Ce projet projets de groupe consiste à créer chacun sa carte électronique puis de les assembler afin de commander un bras robot</p>
+                    <div class="slider-container">
+                        <div class="menu">
+                            <label for="slide-dot-1"></label>
+                            <label for="slide-dot-2"></label>
+                            <label for="slide-dot-3"></label>
+                            <label for="slide-dot-4"></label>
+                            <label for="slide-dot-5"></label>
+                        </div>
+            
+                        <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
+                        <img class="slide-img" src="images/ProjetFinBTS/FaceCarte.png">
+            
+                        <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
+                        <img class="slide-img" src="images/ProjetFinBTS/PileCarte.png">
+            
+                        <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
+                        <img class="slide-img" src="images/ProjetFinBTS/Proteus.png">
+
+                        <input class="slide-input" id="slide-dot-4" type="radio" name="slides">
+                        <img class="slide-img" src="images/ProjetFinBTS/Typon.png">
+
+                        <input class="slide-input" id="slide-dot-5" type="radio" name="slides">
+                        <video class="slide-img" src="images/ProjetFinBTS/Test_Carte.mp4" controls muted></video>
+            
+                    </div>
+
+                </div>
+            </details>
+            <details>
+            <summary><div class="bottom2"><a><h6>Robot suiveur de ligne et éviteur d'obstacle</h6></a></div></summary>
+            <div class="projet-item center">
+                <p>Ce projet consiste à gérer des moteurs, capteurs de luminosités et capteurs à ultrasons </p>
+                    <video src="images/ProjetLycée/projetSTI2D.mp4" controls muted></video>
+            </div>
+            </details>
+            <details>
+                <summary><div class="bottom2"><a><h6>Création de 2 petits jeux</h6></a></div></summary>
+                <div class="projet-item center">
+                    <p>Dans le cadre du projet fusion, activité optionnelle à laquelle je me suis inscrit pendant 2 années, j'ai créé 2 petits jeux avec des amis sur le moteur construct 3</p> 
+                    <img src="images/ProjetFusion/Chimerique.png">
+                    <img src="images/ProjetFusion/SlimeDungeon.png">
+                </div>
+            </details>
+    </section>
+    <section class="box_comp" id="contact">
+        <h3>contact</h3>
+        <div class="contact">
+            <a href="mailto:abraud.travail@gmail.com" class="image-link">
+                <img src="images/mail.png">
+            </a>
+            <h4>abraud.travail@gmail.com</h4>
+            <a href="https://www.linkedin.com/in/armand-braud-5a8385273/?trk=opento_sprofile_goalscard" target="_blank"
+                class="image-link">
+                <img src="images/linkedin.png">
+            </a>
+        </div>
+
+        <form action="index.html" method="post">
+            <label>UserName: <input type="text" required /></label><br />
+            <label>Email: <input type="email" required /></label><br />
+            <label>Sentence: <input type="text" size="50" required /></label><br />
+            <button type="submit">Submit</button>
+
+            <div class="forum"></div>
+        </form>
+        <script>function postData(formattedFormData){
+    
+            fetch('index.php?page=MemberConnect',
+                {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST',
+                     
+                    body: JSON.stringify(formattedFormData)
+                }
+            )
+            .then(function(res) {
+                if (res.ok) {
+                  return res.json();
+                }
+                else{
+                    console.error(res);
+                }
+              })
+              .then(function(value) {
+                  console.log(value);
+              });
+             
+        }
+        </script>
+</body>
