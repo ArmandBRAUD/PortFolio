@@ -1,0 +1,512 @@
+/* Général : HTML et Body */
+html, body {
+    height: 100%; /* Assure que l'HTML et le body prennent toute la hauteur de l'écran */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes */
+}
+
+/* Arrière-plan */
+body {
+    background-color: #f0f0f0; /* Couleur de secours si l'image ne charge pas */
+    background-image: url('images/background.jpg'); /* Chemin vers l'image */
+    background-size: cover; /* L'image couvre tout l'écran */
+    background-position: center; /* Centrage de l'image */
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-attachment: fixed; /* Fixe l'arrière-plan */
+}
+
+/* Style général pour le header */
+header {
+    background-color: #333; /* Couleur sombre pour le header */
+    color: white; /* Texte en blanc */
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Flexbox pour aligner le contenu */
+    justify-content: space-between; /* Espacement entre l'image et les boutons */
+    align-items: center; /* Alignement vertical */
+    text-align: center; /* Centrer le contenu */
+    position: fixed; /* Fixe le header en haut de la page */
+    top: 0; /* Place le header en haut */
+    left: 0; /* Aligne le header à gauche */
+    width: 100%; /* Largeur à 100% */
+    z-index: 1000; /* Permet de superposer le header au-dessus du contenu */
+}
+
+/* Style pour l'image du profil */
+header img {
+    height: 60px; /* Ajuste la taille de l'image */
+    border-radius: 50%; /* Cercle si l'image est carrée */
+}
+
+/* Style pour la barre de boutons */
+.buttonbar button {
+    background-color: #444; /* Couleur sombre pour les boutons */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    margin-left: 10px; /* Espacement entre les boutons */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur de la main */
+    transition: background-color 0.3s, transform 0.3s; /* Transition pour les animations */
+}
+
+/* Animation au survol */
+.buttonbar button:hover {
+    background-color: #555; /* Change la couleur de fond au survol */
+    transform: scale(1.1); /* Légère augmentation de taille */
+}
+
+/* Optionnel : pour les écrans plus petits */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Empile les éléments verticalement */
+    }
+
+    .buttonbar {
+        margin-top: 10px; /* Espacement au-dessus des boutons */
+    }
+}
+
+/* Style pour le texte du titre */
+header h1 {
+    font-size: 2em; /* Taille du texte */
+    color: white; /* Couleur du texte */
+    margin: 0; /* Pas d'espace au-dessus/en-dessous */
+    padding: 0; /* Pas de padding */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Ajustement pour centrer le texte et les boutons */
+header {
+    text-align: center; /* Centrer le contenu */
+}
+
+.buttonbar {
+    margin-right: 50px; /* Espacement entre le titre et les boutons */
+}
+
+/* Style de la section À propos */
+.A_Propos {
+    background: linear-gradient(135deg, #1f1f2e, #2c2c4a); /* Dégradé de fond */
+    color: white; /* Couleur du texte */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 30px; /* Espacement interne */
+    margin: 50px auto; /* Espacement externe centré */
+    max-width: 800px; /* Largeur maximale de la section */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    text-align: center; /* Texte centré */
+    position: relative; /* Nécessaire pour positionner la flèche à l'intérieur */
+    padding-bottom: 80px; /* Ajoute de l'espace en bas pour la flèche */
+    margin-top: 120px; /* Ajout d'une marge pour laisser de l'espace sous le header */
+}
+
+/* Style de l'image de profil */
+.profile-picture {
+    width: 150px; /* Taille de l'image */
+    height: 150px; /* Taille de l'image */
+    border-radius: 50%; /* Forme ronde */
+    margin-bottom: 20px; /* Espacement sous l'image */
+    border: 4px solid white; /* Bordure blanche */
+}
+
+/* Style du texte */
+.A_Propos p {
+    font-size: 1.2em; /* Taille de texte légèrement augmentée */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+/* Section des formations */
+/* Style pour les formations */
+.formations {
+    margin-top: 30px;
+    background-color: #2c2c4a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: white;
+}
+
+.formation-item {
+    margin-bottom: 30px; /* Espacement entre chaque formation */
+}
+
+.formation-item h3 {
+    color: #f0a500; /* Couleur dorée pour les titres */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.formation-item h5 {
+    color: #ccc; /* Couleur gris clair pour le sous-titre */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-style: italic; /* Ajout d'un style italique */
+}
+
+.formation-item p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.formation-item h4 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #f0a500; /* Même couleur que le titre principal */
+}
+
+
+/* Animation pour afficher la section formations */
+.formations.show {
+    display: block;
+    max-height: 500px; /* Limite la hauteur à une taille raisonnable */
+    overflow-y: auto; /* Permet de défiler si le contenu est trop grand */
+}
+
+/* Bouton flèche en bas de la section */
+.arrow-button {
+    background-color: #444; /* Couleur sombre pour le bouton */
+    color: white; /* Texte en blanc */
+    border: none; /* Pas de bordure */
+    padding: 10px 0; /* Espacement interne */
+    width: 100%; /* Largeur à 100% pour occuper toute la largeur de la section */
+    border-radius: 0 0 15px 15px; /* Coins arrondis en bas */
+    cursor: pointer; /* Curseur de la main */
+    display: flex; /* Flexbox pour centrer l'icône de la flèche */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    position: absolute; /* Positionner en bas de la section */
+    bottom: 0; /* Aligner la flèche complètement en bas de la section */
+    left: 0; /* Aligner à gauche */
+    z-index: 10; /* S'assurer que la flèche est au-dessus des autres éléments */
+}
+
+/* Flèche SVG */
+.arrow-button svg {
+    width: 30px;
+    height: 30px;
+    fill: white; /* Couleur de la flèche */
+    transition: transform 0.3s ease; /* Transition pour la rotation */
+}
+
+/* Flèche avec une transition de rotation uniquement lors du clic */
+.arrow-icon {
+    transition: transform 0.3s ease; /* La rotation ne se fait que lors du clic */
+}
+
+/* Rotation de la flèche lorsqu'elle est dépliée (au clic) */
+.arrow-icon.rotate {
+    transform: rotate(180deg); /* Rotation de 180° pour inverser la flèche */
+}
+
+/* Styles pour la section des formations (initialement cachée) */
+.formations {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+/* Styles quand la section des formations est affichée */
+.formations.show {
+    display: block;
+    max-height: 5000px; /* Une hauteur suffisante pour afficher le contenu */
+}
+
+
+
+
+
+/* Section Projets */
+.Projets {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #1f1f2e, #2c2c4a);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.Projets h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f0a500;
+}
+
+.Projets h4 {
+    font-size: 1.5em;
+    color: #f0a500; /* Même couleur que le titre principal */
+}
+
+.projets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projet-card {
+    background-color: #2c2c4a;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, max-height 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.projet-card:hover {
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+}
+
+.projet-card h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #f0a500;
+}
+
+.short-description {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #ccc;
+}
+
+.full-description {
+    display: none;
+    font-size: 1em;
+    line-height: 1.5;
+    color: white;
+}
+
+.projet-card.expanded {
+    transform: scale(1.1);
+    max-height: none;
+    overflow: visible;
+    z-index: 10;
+    margin-bottom: 30px;
+    width: 100%; /* S'étend à la largeur maximale */
+}
+
+.projet-card.expanded .full-description {
+    display: block;
+}
+
+.toggle-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.toggle-button:hover {
+    background-color: #f0a500;
+}
+/* Styles pour le carrousel d'images */
+.image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajuste cette taille selon tes besoins */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+.slider {
+    position: relative;
+    width: 100%; /* Largeur du conteneur */
+    height: 500px; /* Hauteur maximale du slider (ajuste si besoin) */
+    background-color: #1f1f2e;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%; /* Prend toute la hauteur du slider */
+}
+
+.slide {
+    flex-shrink: 0; /* Empêche les images de rétrécir */
+    width: 100%; /* Largeur du slider */
+    height: 100%; /* Hauteur du slider */
+    object-fit: contain; /* Ajuste les images sans les déformer */
+}
+
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+
+.competences-list {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne quand il n'y a plus de place */
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+/* Chaque élément de compétence */
+.competences-list li {
+    background-color: #444;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 150px; /* Les éléments de la liste prennent 150px min. */
+    text-align: center;
+    cursor: pointer; /* Pointeur de souris survolant */
+}
+
+/* Effet au survol des compétences */
+.competences-list li:hover {
+    background-color: #f0a500; /* Changer la couleur au survol */
+    transform: scale(1.1); /* Légère augmentation de la taille */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus marquée */
+}
+
+/* Compétences sur mobile */
+@media (max-width: 600px) {
+    .competences-list li {
+        flex: 1 1 45%; /* Réduit la largeur sur les petits écrans */
+    }
+}
+
+/* Section Expériences */
+.Experiences {
+    margin: 50px auto; /* Centrer et espacement externe */
+    padding: 30px; /* Espacement interne */
+    max-width: 1200px; /* Largeur maximale */
+    background: linear-gradient(135deg, #1f1f2e, #2c2c4a); /* Dégradé de fond */
+    color: white; /* Texte blanc */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    text-align: center; /* Centrer le texte */
+}
+
+.Experiences h2 {
+    font-size: 2.5em; /* Taille du titre principal */
+    margin-bottom: 20px; /* Espacement sous le titre */
+    color: #f0a500; /* Couleur dorée */
+}
+
+.experiences-container {
+    display: flex; /* Flexbox pour aligner les cartes */
+    flex-wrap: wrap; /* Les cartes passent à la ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+    justify-content: center; /* Centrer les cartes horizontalement */
+}
+
+.experience-card {
+    background-color: #2c2c4a; /* Fond des cartes */
+    color: white; /* Couleur du texte */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    width: 300px; /* Largeur des cartes */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+    position: relative; /* Nécessaire pour ajuster les éléments internes */
+}
+
+.experience-card:hover {
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+}
+
+.experience-card h3 {
+    font-size: 1.8em; /* Taille du titre */
+    color: #f0a500; /* Couleur dorée */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+.experience-card h5 {
+    font-size: 1.2em; /* Taille du sous-titre */
+    color: #ccc; /* Couleur gris clair */
+    margin-bottom: 15px; /* Espacement sous le sous-titre */
+    font-style: italic; /* Italique pour le lieu */
+}
+
+.experience-card p {
+    font-size: 1em; /* Taille du paragraphe */
+    line-height: 1.6; /* Hauteur de ligne */
+    color: white; /* Texte blanc */
+    margin-bottom: 20px; /* Espacement sous le texte */
+}
+
+/* Section des compétences */
+#section-competences {
+    background-color: #2c2c4a;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre portée pour un effet de profondeur */
+    margin-top: 50px;
+}
+
+#section-competences h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f0a500; /* Couleur dorée */
+    text-transform: uppercase; /* Texte en majuscules pour un effet impactant */
+    letter-spacing: 2px; /* Espacement des lettres pour un style moderne */
+}
+
+.Contact {
+    background-color: #2c2c4a;
+    padding: 10px ;
+    text-align: center;
+    color: #f0a500;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre portée pour un effet de profondeur */
+    margin-top: 50px;
+}
+.Contact p {
+    
+    color: #fff;
+    
+}

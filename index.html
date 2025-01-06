@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Portfolio Armand BRAUD</h1>
+        <div class="buttonbar">
+            <button id="A_Propos">À propos</button>
+            <a href="#section-projets"><button id="Projets">Projets</button></a>
+        <a href="#section-competences"><button id="Competences">Compétences</button></a>
+        </div>
+    </header>
+
+    <!-- Section À propos -->
+    <section id="section-a-propos" class="A_Propos">
+        <div class="container">
+            <img src="Images/profil.png" alt="Photo de profil" class="profile-picture">
+            <p>
+                Je m'appelle Armand Braud, j'ai 20 ans et je suis une personne passionnée par l'informatique. <br>
+                J'aime m'amuser, jouer à des jeux vidéo, pratiquer du sport et interagir avec les autres, car le contact humain est important pour moi. <br>
+                Sérieux et rigoureux, je m'efforce toujours de donner le meilleur de moi-même dans ce que j'entreprends, que ce soit dans ma vie personnelle ou professionnelle.
+            </p>
+        </div>
+
+        <!-- Flèche pour dérouler les formations -->
+        <button class="arrow-button">
+            <!-- Flèche vers le bas -->
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 16l-6-6h12z"/>
+            </svg>
+        </button>
+
+        <!-- Section des formations (initialement cachée) -->
+        <!-- Section des formations -->
+    <div class="formations">
+        <div class="formation-item">
+            <h3>Bac STI2D SIN</h3>
+            <h5>Lycée Jean Perrin, Saint-Ouen-l'Aumône</h5>
+            <p>
+                Lors de cette formation, j'ai découvert l'univers de l'informatique en me spécialisant dans les systèmes numériques. 
+                Ce cursus m'a initié aux bases de l'électronique, de la modélisation 3D, et à la programmation de cartes électroniques. 
+                J'ai également appris à analyser des documents techniques et à concevoir des projets en justifiant mes choix à l'aide de documents clairs et structurés.
+            </p>
+            <h4>Compétences acquises</h4>
+            <ul class="competences-list">
+                <li>C++</li>
+                <li>Python</li>
+                <li>Diagrammes SYSML</li>
+                <li>Électronique</li>
+                <li>Modélisation 3D</li>
+                <li>Autonomie</li>
+                <li>Esprit d'équipe</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+        <div class="formation-item">
+            <h3>BTS SNEC</h3>
+            <h5>Lycée Jean Perrin, Saint-Ouen-l'Aumône</h5>
+            <p>
+                Pendant ce BTS, j'ai approfondi mes compétences en informatique et en électronique. J'ai travaillé sur plusieurs projets d'équipe, 
+                me permettant de développer ma capacité à collaborer et à résoudre des problèmes complexes. J'ai également perfectionné mes connaissances en réseaux, adressage IP, et systèmes électroniques.
+            </p>
+            <h4>Compétences acquises</h4>
+            <ul class="competences-list">
+                <li>C++</li>
+                <li>HTML / CSS</li>
+                <li>Adressage IP</li>
+                <li>Réseau</li>
+                <li>Diagrammes SYSML</li>
+                <li>Électronique</li>
+                <li>Travail d'équipe</li>
+                <li>Autonomie</li>
+            </ul>
+        </div>
+        <div class="formation-item">
+            <h3>Pré-MSC</h3>
+            <h5>EPITECH, Kremlin-Bicêtre</h5>
+            <p>
+                Actuellement en formation Pré-MSC, je travaille sur des projets pratiques en équipe qui m'exposent à de multiples langages 
+                de programmation et à des frameworks modernes. Cette formation m'aide à maîtriser les outils nécessaires pour développer 
+                des solutions complètes et innovantes.
+            </p>
+            <h4>Compétences acquises</h4>
+            <ul class="competences-list">
+                <li>Python</li>
+                <li>PHP</li>
+                <li>HTML / CSS</li>
+                <li>Tailwind</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+                <li>React</li>
+                <li>Linux / Bash</li>
+                <li>SQL</li>
+                <li>Travail d'équipe</li>
+                <li>Autonomie</li>
+            </ul>
+        </div>
+    </div>
+
+    </section>   
+     
+
+    <script>
+        document.getElementById('A_Propos').addEventListener('click', function() {
+        const section = document.getElementById('section-a-propos');
+        const offset = -100; // Décalage en pixels (ajustez selon la hauteur du header)
+        const sectionPosition = section.getBoundingClientRect().top + window.scrollY + offset;
+
+        // Défilement fluide avec le décalage
+        window.scrollTo({
+            top: sectionPosition,
+            behavior: 'smooth'
+        });
+    });
+        // Fonction pour dérouler et afficher la section formations, avec changement de direction de la flèche
+        document.querySelector('.arrow-button').addEventListener('click', function() {
+            const formations = document.querySelector('.formations');
+            const arrowIcon = document.querySelector('.arrow-icon');
+
+            // Ajouter ou retirer la classe 'show' pour afficher ou masquer la section formations
+            formations.classList.toggle('show');
+
+            // Ajouter ou retirer la classe 'rotate' pour faire pivoter la flèche lors du clic
+            arrowIcon.classList.toggle('rotate'); // Tourne la flèche uniquement au clic
+        });
+    </script>
+    <!-- Section Projets -->
+<section id="section-projets" class="Projets">
+    <h2>Mes Projets</h2>
+    <div class="projets-container">
+        <style>
+            ul {
+                list-style-type: none; /* Supprime les points */
+                padding: 0; /* Optionnel : enlève les indentations */
+                margin: 0; /* Optionnel : enlève les marges */
+            }
+        </style>
+        <!-- Projet 1 -->
+        <div class="projet-card">
+            <h3>Robot suiveur de ligne</h3>
+            <p class="short-description">Concevoir un Robot suiveur de ligne et Esquiveur d'obstacle</p>
+            <div class="full-description">
+                <p>
+                    Ce robot a été réalisé à 2 durant ma terminale STI2D, il consiste à choisir les capteurs aproprié et à les codées en C++.
+                </p>
+                <h4>Compétences acquises</h4>
+                <ul class="competences-list">
+                    <li>Arduino</li>
+                    <li>C++</li>
+                    <li>Recherche</li>
+                    <li>Câblage</li>
+                </ul>
+                <div class="slider" id="slider1">
+                    <div class="slider-container">
+                        <video class="slide" muted autoplay>
+                            <source src="Images/Projet1/1.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </div>
+                 </div>             
+            </div>
+            <button class="toggle-button">Voir plus</button>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="projet-card">
+            <h3>Bras Robot</h3>
+            <p class="short-description">Programmé un bras Robot et concevoir sa carte électronique</p>
+            <div class="full-description">
+                <p>
+                    Ce bras robot a été réalisé à 3 durant mon BTS SNEC. Ce projet m'as permit de confirmer mes compétences en programmation C++, électronique et en soudure mais aussi d'apprendre a bien planifier et présenter un produit. <br>
+                    Ce Projet nous a fait concevoir 3 cartes électroniques qui communiques entre elles afin de faire passer les ordres et les informations.
+                </p>
+                <h4>Compétences acquises</h4>
+                <ul class="competences-list">
+                    <li>Arduino / C++</li>
+                    <li>Proteus</li>
+                    <li>Soudure</li>
+                    <li>Recherche</li>
+                    <li>Câblage</li>
+                    <li>SYSML</li>
+                    <li>GANTT</li>
+                </ul>
+                <div class="slider" id="slider2">
+                    <div class="slider-container">
+                        <video class="slide" muted autoplay>
+                            <source src="Images/Projet2/5.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                        <img src="Images/Projet2/1.png" alt="Image 1" class="slide">
+                        <img src="Images/Projet2/2.png" alt="Image 2" class="slide">
+                        <img src="Images/Projet2/3.png" alt="Image 3" class="slide">
+                        <img src="Images/Projet2/4.png" alt="Image 4" class="slide">
+                    </div>
+                    <button class="arrow left" onclick="prevSlide('slider2')">&#10094;</button>
+                    <button class="arrow right" onclick="nextSlide('slider2')">&#10095;</button>
+                </div>
+                <!-- passer d'une image a une autre avec des fleches (une vidéo au format portrait)-->
+            </div>
+            <button class="toggle-button">Voir plus</button>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="projet-card">
+            <h3>Jeux Vidéo</h3>
+            <p class="short-description">Création d'un jeux vidéo en 2D avec JAVA</p>
+            <div class="full-description">
+                <p>
+                    Ce Jeux a été réalisé à 3 en 2 semaines à EPITECH. Ce projet m'a permit de m'améliorer en JAVA. <br>
+                    Pour ce projet nous avons réalisé un jeu de cartes en Tour par tours et nous avons prix des assets graphiques pour les animations.                
+                </p>
+                <h4>Compétences acquises</h4>
+
+                <ul class="competences-list">
+                    <li>JAVA</li>
+                    <li>GIT</li>
+                    <li>LibGDX</li>
+                </ul>
+                <div class="slider" id="slider3">
+                    <div class="slider-container">
+                        <img src="Images/Projet3/1.png" alt="Image 1" class="slide">
+                        <img src="Images/Projet3/2.png" alt="Image 2" class="slide">
+                        <img src="Images/Projet3/3.png" alt="Image 3" class="slide">
+                    </div>
+                    <button class="arrow left" onclick="prevSlide('slider3')">&#10094;</button>
+                    <button class="arrow right" onclick="nextSlide('slider3')">&#10095;</button>
+                </div>
+                <!-- passer d'une image a une autre avec des fleches -->
+            </div>
+            <button class="toggle-button">Voir plus</button>
+        </div>
+        
+        <!-- Projet 4 -->
+        <div class="projet-card">
+            <h3>Site Web</h3>
+            <p class="short-description">Création d'un site Web de recrutement</p>
+            <div class="full-description">
+                <p>
+                    Ce projet a été réalisé à 3 en 2 semaines à EPITECH. Ce projet m'a permit de m'améliorer en HTML/CSS/JavaScript. <br>
+                    A travers ce projet j'ai pu apprendre à utiliser des bases de données SQL et à uriliser du REACT.
+                </p>
+                <h4>Compétences acquises</h4>
+                <ul class="competences-list">
+                    <li>PostgreSQL</li>
+                    <li>REACT</li>
+                    <li>Node.JS</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+            <button class="toggle-button">Voir plus</button>
+        </div>
+
+        <!-- Projet 5 -->
+        <div class="projet-card">
+            <h3>Hébergement d'un site web sous Linux</h3>
+            <p class="short-description">Affichage d'un site web et gestion des droits dans un réseau sous Linux</p>
+            <div class="full-description">
+                <p>
+                    Ce Projet a été réalisé à 3 en 2 semaines à EPITECH. Ce projet consistait a creer un serveur web sur un réseau de machines virtuelles en gérants les droits
+                    Nous avons créé une VM (Virtual Machine) pour fournir la connexion internet au réseau et gérer les droit d'accès.<br>
+                    La deuxième a pour fonction d'héberger le serveur web avec sa base de données. <br>
+                    Nous en avons créer 2 autres afin de simuler une connexion Client et Administrateur pour vérifier que les droits étaient correctements assignés
+                    .<br>
+                </p>
+                <h4>Compétences acquises</h4>
+                <ul class="competences-list">
+                    <li>VirtualBOX</li>
+                    <li>FreeDSB</li>
+                    <li>OpenDSB</li>
+                    <li>Linux</li>
+                    <li>SSH</li>
+                    <li>BASH</li>
+                    <li>GIT</li>
+                    <li>Adressage IP</li>
+                    <li>SQL</li>
+                    <li>PHP</li>
+                </ul>
+                <!-- passer d'une image a une autre avec des fleches -->
+                <div class="slider" id="slider5">
+                    <div class="slider-container">
+                        <img src="Images/Projet5/1.png" alt="Image 1" class="slide">
+                        <img src="Images/Projet5/2.png" alt="Image 2" class="slide">
+                    </div>
+                    <button class="arrow left" onclick="prevSlide('slider5')">&#10094;</button>
+                    <button class="arrow right" onclick="nextSlide('slider5')">&#10095;</button>
+                </div>
+            </div>
+            <button class="toggle-button">Voir plus</button>
+        </div>
+    </div>
+</section>
+ <!-- Section Expériences -->
+ <section id="section-experiences" class="Experiences">
+    <h2>Mes Expériences</h2>
+    <div class="experiences-container">
+        <!-- Expérience 1 -->
+        <div class="experience-card">
+            <h3>Stagiaire en Développement Intégré</h3>
+            <h5>Entreprise Neyos, Cergy</h5>
+            <p>
+                Stage de 2 mois où j'ai participé a la creation d'une balise de positionnement dans une Start-up. 
+                J'ai travaillé sur l'intégration de fonctions, la création de composants en C.
+            </p>
+            <h4>Compétences acquises :</h4>
+            <ul class="competences-list">
+                <li>C</li>
+                <li>Soudure</li>
+                <li>Collaboration agile</li>
+                <li>Documentation technique</li>
+                <li>Autonomie</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <!-- Section Compétences -->
+    <section id="section-competences" class="Competences">
+        <h2>Compétences</h2>
+        <div class="competences-container">
+            <ul class="competences-list">
+                <li><strong>Langages de programmation</strong>
+                    <ul>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>JAVA</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>Node.js</li>
+                        <li>React</li>
+                        <li>HTML / CSS</li>
+                        <li>Git</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </li>
+                <li><strong>Systèmes d'exploitation et outils</strong>
+                    <ul>
+                        <li>Linux / Bash</li>
+                        <li>VirtualBox</li>
+                        <li>SSH</li>
+                        <li>LibGDX</li>
+                    </ul>
+                </li>
+                <li><strong>Réseau et protocoles</strong>
+                    <ul>
+                        <li>Adressage IP</li>
+                        <li>Réseau</li>
+                    </ul>
+                </li>
+                <li><strong>Électronique et modélisation</strong>
+                    <ul>
+                        <li>Électronique</li>
+                        <li>Câblage</li>
+                        <li>Proteus</li>
+                        <li>Soudure</li>
+                        <li>Arduino</li>
+                        <li>STM32CubeIDE</li>
+                        <li>Diagrammes SYSML</li>
+                        <li>Modélisation 3D</li>
+                        <li>SolidWorks</li>
+                    </ul>
+                </li>
+                <li><strong>Méthodes et processus</strong>
+                    <ul>
+                        <li>Autonomie</li>
+                        <li>Esprit d'équipe</li>
+                        <li>Communication</li>
+                        <li>Collaboration agile</li>
+                        <li>Documentation technique</li>
+                    </ul>
+                </li>
+                <li><strong>Outils de gestion de projet</strong>
+                    <ul>
+                        <li>GANTT</li>
+                        <li>Word</li>
+                        <li>Excel</li>
+                        <li>Github</li>
+                    </ul>
+                </li>
+                <li><strong>Autres</strong>
+                    <ul>
+                        <li>Recherche</li>
+                        <li>Tailwind</li>
+                        <li>FreeDSB</li>
+                        <li>OpenDSB</li>
+                        <li>Anglais</li>
+                        <li>Espagnol</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Section Contact -->
+<section id="section-contact" class="Contact">
+    <h2>Contactez-moi</h2>
+    <p>abraud.travail@gmail.com</p>
+<script>
+    const projectCards = document.querySelectorAll('.projet-card'); // Corriger le sélecteur pour les projets
+
+projectCards.forEach(card => {
+    const toggleButton = card.querySelector('.toggle-button'); // Bouton spécifique à la carte
+    toggleButton.addEventListener('click', () => {
+        const isExpanded = card.classList.contains('expanded'); // Vérifie si la carte est agrandie
+
+        // Réinitialiser toutes les cartes et remettre les boutons à "Voir plus"
+        projectCards.forEach(c => {
+            c.classList.remove('expanded');
+            c.querySelector('.toggle-button').innerText = 'Voir plus';
+        });
+
+        // Si la carte n'était pas déjà agrandie, l'agrandir et changer le texte du bouton
+        if (!isExpanded) {
+            card.classList.add('expanded');
+            toggleButton.innerText = 'Voir moins'; // Mettre le texte à "Voir moins"
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>
