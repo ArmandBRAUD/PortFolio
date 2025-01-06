@@ -8,7 +8,7 @@ html, body {
 /* Arrière-plan */
 body {
     background-color: #f0f0f0; /* Couleur de secours si l'image ne charge pas */
-    background-image: url('images/background.jpg'); /* Chemin vers l'image */
+    background-image: url('Images/background.jpg'); /* Chemin vers l'image */
     background-size: cover; /* L'image couvre tout l'écran */
     background-position: center; /* Centrage de l'image */
     background-repeat: no-repeat; /* Pas de répétition */
